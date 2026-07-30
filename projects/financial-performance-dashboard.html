@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Performance Dashboard — Case Study | Anne Sritharan</title>
+<meta name="description" content="Power BI case study: revenue analysis dashboard built on 9,800 Superstore sales orders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>.cs-shot{width:100%; border-radius:6px; border:1px solid var(--line); margin-bottom:8px;} .cs-cap{font-family:var(--mono); font-size:0.76rem; color:var(--ink-soft); margin-bottom:24px;}</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html#top">Anne&nbsp;Sritharan<span>.</span></a>
+    <div class="navlinks">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <a class="cs-back" href="../index.html#work">← Back to projects</a>
+    <h1>Financial Performance Dashboard</h1>
+    <p class="hero-sub">A Power BI dashboard turning 9,800 retail sales orders into executive-ready revenue insights across regions, segments and product categories.</p>
+    <div class="cs-meta">
+      <span class="tag">Power BI</span>
+      <span class="tag">DAX</span>
+      <span class="tag">Power Query</span>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+
+  <div class="cs-section">
+    <h2><span class="cs-num">01</span> Business problem</h2>
+    <p>Decision-makers need a clear, at-a-glance view of revenue performance — which regions, segments and categories are driving sales, and how performance trends over time — rather than piecing figures together manually each reporting cycle.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">02</span> Background &amp; dataset</h2>
+    <p>Built on a retail sales dataset (Superstore) covering order dates, customer segments, regions and product categories.</p>
+    <ul>
+      <li><strong>9,800</strong> sales orders analysed</li>
+      <li><strong>2015–2018</strong> date range</li>
+      <li>Dimensions: region, segment, category, sub-category</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">03</span> Objectives</h2>
+    <ul>
+      <li>Track total revenue, order volume and average order value at a glance</li>
+      <li>Analyse monthly and yearly revenue trends</li>
+      <li>Compare performance across regions, segments and product categories</li>
+      <li>Identify top revenue-driving products and sub-categories</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">04</span> Tools &amp; technologies</h2>
+    <div class="skill-tags">
+      <span class="skill-tag">Power BI</span><span class="skill-tag">DAX</span><span class="skill-tag">Power Query</span>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">05</span> Data cleaning &amp; preparation</h2>
+    <p>Date parsing and data type validation performed in Power Query to ensure order dates and numeric fields loaded correctly for time-intelligence calculations.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">06</span> Methodology</h2>
+    <p>System built in four layers: data collection (the 9,800-order dataset), data processing (Power Query date parsing and validation), analysis (DAX measures for revenue KPIs and time intelligence), and visualisation (a 2-page Power BI report).</p>
+    <ul>
+      <li>KPI cards: total revenue, total orders, average order value, top region</li>
+      <li>Monthly revenue trend line chart with year-over-year comparison</li>
+      <li>Revenue breakdowns by region and segment</li>
+      <li>Category and sub-category revenue ranking</li>
+      <li>Interactive slicers for year, region and segment</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">07</span> Dashboard &amp; visualisations</h2>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/Financial-performance-dashboard-powerbi/main/screenshots/overview.png" alt="Financial Performance Dashboard overview page">
+    <div class="cs-cap">Overview page — revenue KPIs and monthly trend</div>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/Financial-performance-dashboard-powerbi/main/screenshots/category_analysis.png" alt="Category analysis page">
+    <div class="cs-cap">Category analysis page — revenue ranking by category and sub-category</div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">08</span> Key insights</h2>
+    <ul>
+      <li>Revenue, order volume and average order value are visible at a glance through KPI cards, replacing manual reporting</li>
+      <li>Monthly trend view with year-over-year comparison surfaces seasonal patterns across the 2015–2018 period</li>
+      <li>Regional and segment breakdowns identify which parts of the business are driving revenue</li>
+      <li>Category-level ranking highlights the specific products generating the most sales</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">09</span> Business recommendations</h2>
+    <ul>
+      <li>Use the top-region and top-category views to prioritise inventory and marketing focus</li>
+      <li>Extend the model with cost data (see limitation below) to move from revenue tracking to true margin analysis</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">10</span> Challenges &amp; limitations</h2>
+    <p>The dataset contains sales revenue only — it does not include cost, profit margin or budget figures, so budget-vs-actual and profitability analysis were out of scope for this version. A future iteration could incorporate cost data for full financial variance analysis.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">11</span> What I learned</h2>
+    <ul>
+      <li>Time intelligence in Power BI — building monthly/yearly trend aggregations from raw transaction dates</li>
+      <li>DAX measure design for sales KPIs, including DISTINCTCOUNT and AVERAGEX patterns</li>
+      <li>Multi-level category analysis and ranking visuals</li>
+    </ul>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <div class="cs-cta-row">
+    <a class="btn btn-primary" href="https://github.com/subashinijaya/Financial-performance-dashboard-powerbi" target="_blank" rel="noopener">View GitHub repo</a>
+    <a class="btn btn-outline" href="../index.html#work">← Back to all projects</a>
+  </div>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-row">
+      <a class="contact-item" href="mailto:subashinisri3@gmail.com">✉ subashinisri3@gmail.com</a>
+      <a class="contact-item" href="https://github.com/subashinijaya" target="_blank" rel="noopener">⌥ github.com/subashinijaya</a>
+      <a class="contact-item" href="https://linkedin.com/in/anne-subashini-sritharan-112a09142" target="_blank" rel="noopener">in linkedin.com/in/anne-subashini-sritharan-112a09142</a>
+    </div>
+    <div class="foot-note">© 2026 Anne Subashini Sritharan</div>
+  </div>
+</footer>
+
+</body>
+</html>

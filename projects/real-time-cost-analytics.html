@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-Time Cost Analytics — Case Study | Anne Sritharan</title>
+<meta name="description" content="Streamlit case study: interactive energy cost monitoring app with a simulated real-time price feed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>.cs-shot{width:100%; border-radius:6px; border:1px solid var(--line); margin-bottom:8px;} .cs-cap{font-family:var(--mono); font-size:0.76rem; color:var(--ink-soft); margin-bottom:24px;}</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html#top">Anne&nbsp;Sritharan<span>.</span></a>
+    <div class="navlinks">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <a class="cs-back" href="../index.html#work">← Back to projects</a>
+    <h1>Real-Time Data Visualisation &amp; Cost Analytics</h1>
+    <p class="hero-sub">An interactive Streamlit web app for energy cost monitoring — live-updating charts, KPI metrics and multi-country comparison across a 25-year global energy dataset.</p>
+    <div class="cs-meta">
+      <span class="tag">Python</span>
+      <span class="tag">Streamlit</span>
+      <span class="tag">Pandas</span>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+
+  <div class="cs-section">
+    <h2><span class="cs-num">01</span> Business problem</h2>
+    <p>Teams without a Power BI or Tableau licence still need interactive, browser-based analytics — and operational monitoring often needs to feel live, not just periodically refreshed.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">02</span> Background &amp; dataset</h2>
+    <p>Global energy consumption dataset covering 10 countries over 2000–2024.</p>
+    <ul><li><strong>10 countries</strong>, 25 years of yearly data</li></ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">03</span> Objectives</h2>
+    <ul>
+      <li>Provide an interactive, browser-based analytics dashboard without BI licensing</li>
+      <li>Monitor energy consumption and price trends across countries and years</li>
+      <li>Demonstrate real-time data streaming and incremental chart updates</li>
+      <li>Showcase full-stack data app development in pure Python</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">04</span> Tools &amp; technologies</h2>
+    <div class="skill-tags">
+      <span class="skill-tag">Python 3</span><span class="skill-tag">Streamlit</span><span class="skill-tag">pandas</span><span class="skill-tag">NumPy</span>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">05</span> Data cleaning &amp; preparation</h2>
+    <p>Data loaded with Streamlit caching (<code>@st.cache_data</code>), then cleaned by aggregating duplicate country-year rows via a pandas groupby.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">06</span> Methodology</h2>
+    <ul>
+      <li>KPI metric cards — total consumption, average price, renewable share, carbon emissions</li>
+      <li>Interactive filters — multi-select country picker and year range slider</li>
+      <li>Trend charts — consumption and price by country over time</li>
+      <li>Comparison charts — renewable share vs fossil dependency</li>
+      <li>A simulated real-time price feed with incremental chart updates and delta metrics</li>
+      <li>An expandable, filterable data explorer table</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">07</span> Dashboard &amp; visualisations</h2>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/websiteon-real-time-data-visualisation-cost-analytics/main/screenshots/dashboard.png" alt="Cost analytics dashboard overview">
+    <div class="cs-cap">Dashboard overview — KPI cards and trend charts</div>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/websiteon-real-time-data-visualisation-cost-analytics/main/screenshots/live_monitor.png" alt="Live cost monitor">
+    <div class="cs-cap">Live cost monitor — simulated real-time price feed with delta metrics</div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">08</span> Key insights</h2>
+    <ul>
+      <li>A fully interactive analytics app can be built and deployed with pure Python, no BI licence required</li>
+      <li>Streamlit's caching and session model made the real-time feed simulation feel genuinely live</li>
+      <li>pandas groupby/pivot patterns were essential to keep chart data clean despite duplicate rows in the source</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">09</span> Challenges &amp; limitations</h2>
+    <p>The dataset is yearly and country-level. The "live feed" section simulates real-time price ticks around the historical average to demonstrate streaming visualisation patterns — in production this would connect to a live API or message queue such as Kafka or MQTT.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">10</span> What I learned</h2>
+    <ul>
+      <li>Streamlit app architecture — layout, caching, session interactivity</li>
+      <li>Real-time visualisation patterns using placeholders and incremental rendering</li>
+      <li>Building deployable data apps in pure Python, beyond traditional BI tools</li>
+    </ul>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <div class="cs-cta-row">
+    <a class="btn btn-primary" href="https://github.com/subashinijaya/websiteon-real-time-data-visualisation-cost-analytics" target="_blank" rel="noopener">View GitHub repo</a>
+    <a class="btn btn-outline" href="../index.html#work">← Back to all projects</a>
+  </div>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-row">
+      <a class="contact-item" href="mailto:subashinisri3@gmail.com">✉ subashinisri3@gmail.com</a>
+      <a class="contact-item" href="https://github.com/subashinijaya" target="_blank" rel="noopener">⌥ github.com/subashinijaya</a>
+      <a class="contact-item" href="https://linkedin.com/in/anne-subashini-sritharan-112a09142" target="_blank" rel="noopener">in linkedin.com/in/anne-subashini-sritharan-112a09142</a>
+    </div>
+    <div class="foot-note">© 2026 Anne Subashini Sritharan</div>
+  </div>
+</footer>
+
+</body>
+</html>

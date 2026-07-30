@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telco Customer Churn Analysis — Case Study | Anne Sritharan</title>
+<meta name="description" content="Python case study: end-to-end churn analysis and predictive modelling on 7,000+ telco customers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>.cs-shot{width:100%; border-radius:6px; border:1px solid var(--line); margin-bottom:8px;} .cs-cap{font-family:var(--mono); font-size:0.76rem; color:var(--ink-soft); margin-bottom:24px;}</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html#top">Anne&nbsp;Sritharan<span>.</span></a>
+    <div class="navlinks">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <a class="cs-back" href="../index.html#work">← Back to projects</a>
+    <h1>Telco Customer Churn Analysis</h1>
+    <p class="hero-sub">End-to-end churn analysis on 7,043 telco customers — cleaning, exploratory analysis, and predictive modelling to answer: which customers are most likely to leave, and why?</p>
+    <div class="cs-meta">
+      <span class="tag">Python</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">Scikit-learn</span>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+
+  <div class="cs-section">
+    <h2><span class="cs-num">01</span> Business problem</h2>
+    <p>Telco companies lose recurring revenue every time a customer leaves. The core question: which customers are most likely to churn, and what's driving it — so retention effort can be targeted rather than blanket.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">02</span> Background &amp; dataset</h2>
+    <p>IBM Telco Customer Churn sample dataset (publicly available via Kaggle and IBM).</p>
+    <ul>
+      <li><strong>7,043</strong> customers, 21 features</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">03</span> Tools &amp; technologies</h2>
+    <div class="skill-tags">
+      <span class="skill-tag">Python 3</span><span class="skill-tag">pandas</span><span class="skill-tag">NumPy</span>
+      <span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span><span class="skill-tag">scikit-learn</span><span class="skill-tag">Jupyter</span>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">04</span> Data cleaning &amp; preparation</h2>
+    <ul>
+      <li>Fixed the known <code>TotalCharges</code> text/blank issue — 11 rows for tenure-0 customers</li>
+      <li>Verified no duplicate records</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">05</span> Exploratory data analysis</h2>
+    <ul>
+      <li>Churn distribution across the customer base</li>
+      <li>Churn rate by contract type</li>
+      <li>Tenure histograms</li>
+      <li>Monthly charges boxplots</li>
+      <li>Internet service type comparison</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">06</span> Methodology</h2>
+    <ul>
+      <li>Modelling: Logistic Regression (interpretable baseline) and Random Forest (non-linear patterns)</li>
+      <li>75/25 stratified train/test split</li>
+      <li>Evaluation: accuracy, precision/recall, confusion matrix</li>
+      <li>Feature importance ranking to identify the top 10 churn drivers</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">07</span> Dashboard &amp; visualisations</h2>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/Telco-customer-churn-analysis/main/screenshots/churn_by_contract.png" alt="Churn rate by contract type chart">
+    <div class="cs-cap">Churn rate by contract type</div>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/Telco-customer-churn-analysis/main/screenshots/feature_importance.png" alt="Top churn drivers feature importance chart">
+    <div class="cs-cap">Top churn drivers (Random Forest feature importance)</div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">08</span> Key insights</h2>
+    <ul>
+      <li><strong>Overall churn rate: ~27%</strong> — roughly 1 in 4 customers leave</li>
+      <li><strong>Contract type is the strongest churn driver:</strong> month-to-month customers churn at ~43%, vs ~11% for one-year and ~3% for two-year contracts</li>
+      <li><strong>Early tenure is the danger zone</strong> — churn concentrates in the first 12 months</li>
+      <li><strong>Best model: Logistic Regression, ~80% accuracy</strong> on the held-out test set</li>
+      <li><strong>Top churn drivers (Random Forest):</strong> TotalCharges, tenure, MonthlyCharges, fibre-optic internet, electronic check payment</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">09</span> Business recommendations</h2>
+    <ul>
+      <li>Convert month-to-month customers to annual contracts with discount incentives — the single biggest retention lever</li>
+      <li>Strengthen first-90-day onboarding, since early-tenure customers are the highest-risk group</li>
+      <li>Review fibre-optic pricing and value perception — the premium product shows premium churn</li>
+      <li>Use the model's churn scores to target retention offers at high-risk, high-value customers</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">10</span> Challenges &amp; what I learned</h2>
+    <p>The churn class is imbalanced (fewer churners than non-churners), which affects recall on the minority class. Addressing this with SMOTE or class weights is flagged as a future improvement, alongside testing gradient boosting models (XGBoost, LightGBM) and deploying churn scoring for CRM integration.</p>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <div class="cs-cta-row">
+    <a class="btn btn-primary" href="https://github.com/subashinijaya/Telco-customer-churn-analysis" target="_blank" rel="noopener">View GitHub repo</a>
+    <a class="btn btn-outline" href="../index.html#work">← Back to all projects</a>
+  </div>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-row">
+      <a class="contact-item" href="mailto:subashinisri3@gmail.com">✉ subashinisri3@gmail.com</a>
+      <a class="contact-item" href="https://github.com/subashinijaya" target="_blank" rel="noopener">⌥ github.com/subashinijaya</a>
+      <a class="contact-item" href="https://linkedin.com/in/anne-subashini-sritharan-112a09142" target="_blank" rel="noopener">in linkedin.com/in/anne-subashini-sritharan-112a09142</a>
+    </div>
+    <div class="foot-note">© 2026 Anne Subashini Sritharan</div>
+  </div>
+</footer>
+
+</body>
+</html>

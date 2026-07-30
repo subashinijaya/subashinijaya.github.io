@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Machine Failure Prediction — Case Study | Anne Sritharan</title>
+<meta name="description" content="Classification case study: predicting machine failure risk from sensor data using four ML models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html#top">Anne&nbsp;Sritharan<span>.</span></a>
+    <div class="navlinks">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <a class="cs-back" href="../index.html#work">← Back to projects</a>
+    <h1>Machine Failure Prediction</h1>
+    <p class="hero-sub">A classification model predicting machine failure risk from sensor data, built for MDA512 (Data Science) as a group project.</p>
+    <div class="cs-meta">
+      <span class="tag">Python</span>
+      <span class="tag">Classification</span>
+      <span class="tag">Group project</span>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+
+  <div class="cs-section">
+    <h2><span class="cs-num">01</span> Business problem</h2>
+    <p>Unplanned machine failure disrupts industrial operations. The project's goal was to develop a model that flags failure risk early enough to support proactive intervention rather than reactive repair.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">02</span> Background &amp; dataset</h2>
+    <p>Custom machine sensor dataset.</p>
+    <ul>
+      <li>Features: Temperature, Vibration, Power Usage, Humidity, Machine Type</li>
+      <li>Target variable: <code>Failure_Risk</code> (1 = failure likely, 0 = no failure)</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">03</span> My role</h2>
+    <p>This was a group assignment for the MDA512 Data Science unit (Group 3). I contributed to the data preparation and modelling work alongside my teammates.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">04</span> Tools &amp; technologies</h2>
+    <div class="skill-tags">
+      <span class="skill-tag">Python</span><span class="skill-tag">Logistic Regression</span>
+      <span class="skill-tag">Decision Tree</span><span class="skill-tag">Random Forest</span><span class="skill-tag">Gradient Boosting</span>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">05</span> Methodology</h2>
+    <p>Four classification models were trained and compared on the sensor dataset:</p>
+    <ul>
+      <li>Logistic Regression</li>
+      <li>Decision Tree Classifier</li>
+      <li>Random Forest</li>
+      <li>Gradient Boosting</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">06</span> Key insights</h2>
+    <p><strong>Gradient Boosting performed best</strong>, with the highest F1-score and lowest misclassification rate among the four models tested.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">07</span> Deliverables</h2>
+    <ul>
+      <li>Jupyter notebook with the full analysis</li>
+      <li>Final written report (DOCX and HTML)</li>
+      <li>Group presentation slides</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">08</span> What I learned</h2>
+    <p>Comparing multiple classification algorithms on the same dataset made the trade-offs between interpretable models (Logistic Regression) and higher-performing ensemble methods (Gradient Boosting) concrete rather than theoretical.</p>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <div class="cs-cta-row">
+    <a class="btn btn-primary" href="https://github.com/subashinijaya/Machine-Failure-Prediction-MDA-Assignment-2-Samar_Group_3-" target="_blank" rel="noopener">View GitHub repo</a>
+    <a class="btn btn-outline" href="../index.html#work">← Back to all projects</a>
+  </div>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-row">
+      <a class="contact-item" href="mailto:subashinisri3@gmail.com">✉ subashinisri3@gmail.com</a>
+      <a class="contact-item" href="https://github.com/subashinijaya" target="_blank" rel="noopener">⌥ github.com/subashinijaya</a>
+      <a class="contact-item" href="https://linkedin.com/in/anne-subashini-sritharan-112a09142" target="_blank" rel="noopener">in linkedin.com/in/anne-subashini-sritharan-112a09142</a>
+    </div>
+    <div class="foot-note">© 2026 Anne Subashini Sritharan</div>
+  </div>
+</footer>
+
+</body>
+</html>

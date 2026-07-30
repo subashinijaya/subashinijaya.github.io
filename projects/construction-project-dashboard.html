@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Construction Project Performance Dashboard — Case Study | Anne Sritharan</title>
+<meta name="description" content="Power BI case study: cost, duration and risk analysis across 1,300 construction tasks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>.cs-shot{width:100%; border-radius:6px; border:1px solid var(--line); margin-bottom:8px;} .cs-cap{font-family:var(--mono); font-size:0.76rem; color:var(--ink-soft); margin-bottom:24px;}</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html#top">Anne&nbsp;Sritharan<span>.</span></a>
+    <div class="navlinks">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <a class="cs-back" href="../index.html#work">← Back to projects</a>
+    <h1>Construction Project Performance Dashboard</h1>
+    <p class="hero-sub">Power BI dashboard analysing cost, duration and risk across 1,300 construction tasks — helping teams spot which tasks drive the most cost and risk exposure.</p>
+    <div class="cs-meta">
+      <span class="tag">Power BI</span>
+      <span class="tag">DAX</span>
+      <span class="tag">Power Query</span>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+
+  <div class="cs-section">
+    <h2><span class="cs-num">01</span> Business problem</h2>
+    <p>Project teams need to quickly identify which tasks are high-cost, high-risk or resource-heavy, so management attention goes where it matters most.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">02</span> Background &amp; dataset</h2>
+    <p>Task-level construction dataset covering duration, labor, equipment, material cost and risk classification.</p>
+    <ul><li><strong>1,300</strong> construction tasks</li></ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">03</span> Objectives</h2>
+    <ul>
+      <li>Track total project cost and task volume at a glance</li>
+      <li>Compare cost and duration across risk levels (Low / Medium / High)</li>
+      <li>Identify which tasks are the biggest cost and risk drivers</li>
+      <li>Support resourcing decisions using labor and equipment data</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">04</span> Tools &amp; technologies</h2>
+    <div class="skill-tags">
+      <span class="skill-tag">Power BI</span><span class="skill-tag">Power Query</span><span class="skill-tag">DAX</span><span class="skill-tag">Python (pandas)</span>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">05</span> Data cleaning &amp; preparation</h2>
+    <p>Data type validation in Power Query, with initial data validation in Python (pandas) before load.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">06</span> Methodology</h2>
+    <ul>
+      <li>KPI cards: total tasks, total material cost, average duration, average labor, high-risk task %</li>
+      <li>Cost breakdown by risk level (bar chart)</li>
+      <li>Duration-vs-cost scatter plot, sized by labor requirement, coloured by risk</li>
+      <li>Sortable task-level cost and risk table</li>
+      <li>Interactive slicers for risk level and dependency count</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">07</span> Dashboard &amp; visualisations</h2>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/construction-project-dashboard-powerbi/main/overview.png" alt="Construction dashboard overview page">
+    <div class="cs-cap">Overview page — KPI cards and cost breakdown by risk</div>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/construction-project-dashboard-powerbi/main/cost_risk_analysis.png" alt="Cost and risk analysis page">
+    <div class="cs-cap">Cost and risk analysis page — duration vs cost scatter plot</div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">08</span> Key insights</h2>
+    <ul>
+      <li>High-risk tasks are isolated quickly through the risk-segmented cost breakdown</li>
+      <li>The duration-vs-cost scatter plot (sized by labor, coloured by risk) surfaces multi-variable outliers a single chart couldn't show</li>
+      <li>Sortable task-level table gives project managers a drill-down path from summary KPIs to individual tasks</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">09</span> Challenges &amp; limitations</h2>
+    <p>The dataset is task-level and does not include actual project dates, a start/end timeline, or an on-time-vs-delayed flag. It supports cost, duration and risk analysis, but not calendar-based progress tracking — a future version could add scheduling data for true delay analysis.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">10</span> What I learned</h2>
+    <ul>
+      <li>DAX measure design for segmented KPI reporting — COUNTROWS and CALCULATE with filter conditions</li>
+      <li>Scatter plot analysis for multi-variable comparison (cost, duration, labor, risk)</li>
+      <li>Structuring a dashboard for stakeholder-ready reporting</li>
+    </ul>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <div class="cs-cta-row">
+    <a class="btn btn-primary" href="https://github.com/subashinijaya/construction-project-dashboard-powerbi" target="_blank" rel="noopener">View GitHub repo</a>
+    <a class="btn btn-outline" href="../index.html#work">← Back to all projects</a>
+  </div>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-row">
+      <a class="contact-item" href="mailto:subashinisri3@gmail.com">✉ subashinisri3@gmail.com</a>
+      <a class="contact-item" href="https://github.com/subashinijaya" target="_blank" rel="noopener">⌥ github.com/subashinijaya</a>
+      <a class="contact-item" href="https://linkedin.com/in/anne-subashini-sritharan-112a09142" target="_blank" rel="noopener">in linkedin.com/in/anne-subashini-sritharan-112a09142</a>
+    </div>
+    <div class="foot-note">© 2026 Anne Subashini Sritharan</div>
+  </div>
+</footer>
+
+</body>
+</html>

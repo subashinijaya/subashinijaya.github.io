@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electricity Demand Forecast Dashboard — Case Study | Anne Sritharan</title>
+<meta name="description" content="Power BI case study: global electricity consumption trends and 5-year demand forecasting across 10 countries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<style>.cs-shot{width:100%; border-radius:6px; border:1px solid var(--line); margin-bottom:8px;} .cs-cap{font-family:var(--mono); font-size:0.76rem; color:var(--ink-soft); margin-bottom:24px;}</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="../index.html#top">Anne&nbsp;Sritharan<span>.</span></a>
+    <div class="navlinks">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <a class="cs-back" href="../index.html#work">← Back to projects</a>
+    <h1>Electricity Demand Forecast Dashboard</h1>
+    <p class="hero-sub">Power BI dashboard analysing 25 years of electricity consumption across 10 major economies, with statistical demand forecasting for energy planning.</p>
+    <div class="cs-meta">
+      <span class="tag">Power BI</span>
+      <span class="tag">DAX</span>
+      <span class="tag">Time Series Forecasting</span>
+    </div>
+  </div>
+</header>
+
+<main class="cs-body">
+
+  <div class="cs-section">
+    <h2><span class="cs-num">01</span> Business problem</h2>
+    <p>Energy planning decisions need a clear read on consumption trends and a credible forward projection — not just a historical snapshot — to support capacity and investment decisions.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">02</span> Background &amp; dataset</h2>
+    <p>Historical electricity consumption data for 10 countries — Australia, Brazil, Canada, China, Germany, India, Japan, Russia, UK, USA — covering 2000–2024.</p>
+    <ul><li><strong>10 countries × 25 years</strong> = 250 rows of yearly data</li></ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">03</span> Objectives</h2>
+    <ul>
+      <li>Analyse electricity consumption trends across countries, 2000–2024</li>
+      <li>Identify the highest and lowest consuming countries year over year</li>
+      <li>Forecast electricity demand 5 years ahead using statistical forecasting</li>
+      <li>Compare renewable energy adoption against fossil fuel dependency and carbon emissions</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">04</span> Tools &amp; technologies</h2>
+    <div class="skill-tags">
+      <span class="skill-tag">Power BI</span><span class="skill-tag">Power Query</span><span class="skill-tag">DAX</span>
+      <span class="skill-tag">Python (pandas)</span><span class="skill-tag">Excel/CSV</span>
+    </div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">05</span> Data cleaning &amp; preparation</h2>
+    <p>Cleaned and deduplicated in Power Query, then aggregated to one consistent row per country per year for time-series analysis.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">06</span> Methodology</h2>
+    <ul>
+      <li>Multi-country yearly consumption trend line chart</li>
+      <li>Statistical demand forecast — 5-year projection with 95% confidence interval, using Power BI's Analytics forecasting engine (exponential smoothing)</li>
+      <li>Country comparison: consumption ranking, renewable share vs fossil dependency scatter plot</li>
+      <li>Interactive slicers for country and year</li>
+      <li>DAX measures for YoY growth, averages and totals</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">07</span> Dashboard &amp; visualisations</h2>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/electricity-demand-forecast-dashboard/main/screenshot_overview.png" alt="Electricity demand overview page">
+    <div class="cs-cap">Overview page — consumption trends by country</div>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/electricity-demand-forecast-dashboard/main/screenshot_forecast.png" alt="Demand forecast page">
+    <div class="cs-cap">Forecast page — 5-year demand projection with confidence interval</div>
+    <img class="cs-shot" src="https://raw.githubusercontent.com/subashinijaya/electricity-demand-forecast-dashboard/main/screenshot_comparison.png" alt="Country comparison page">
+    <div class="cs-cap">Comparison page — renewable share vs fossil dependency</div>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">08</span> Key insights</h2>
+    <ul>
+      <li>Clear ranking of highest and lowest electricity-consuming countries across the 25-year window</li>
+      <li>A 5-year statistical forecast with confidence intervals gives planners a range, not a single misleadingly precise number</li>
+      <li>Renewable-share vs fossil-dependency comparison highlights how far each country's energy mix has shifted</li>
+    </ul>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">09</span> Challenges &amp; limitations</h2>
+    <p>The dataset is yearly and country-level, not monthly or region-level, and includes no smart grid or sensor-level data. The forecast is a statistical projection based on historical trend patterns available in the data — a demonstration of forecasting methodology, not an official energy planning forecast.</p>
+  </div>
+
+  <div class="cs-section">
+    <h2><span class="cs-num">10</span> What I learned</h2>
+    <ul>
+      <li>Time-series data cleaning and deduplication</li>
+      <li>Power BI statistical forecasting — exponential smoothing and confidence intervals</li>
+      <li>DAX measure design for YoY growth and aggregations</li>
+      <li>Dashboard storytelling across multiple pages</li>
+    </ul>
+  </div>
+
+  <div class="cs-divider"></div>
+
+  <div class="cs-cta-row">
+    <a class="btn btn-primary" href="https://github.com/subashinijaya/electricity-demand-forecast-dashboard" target="_blank" rel="noopener">View GitHub repo</a>
+    <a class="btn btn-outline" href="../index.html#work">← Back to all projects</a>
+  </div>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-row">
+      <a class="contact-item" href="mailto:subashinisri3@gmail.com">✉ subashinisri3@gmail.com</a>
+      <a class="contact-item" href="https://github.com/subashinijaya" target="_blank" rel="noopener">⌥ github.com/subashinijaya</a>
+      <a class="contact-item" href="https://linkedin.com/in/anne-subashini-sritharan-112a09142" target="_blank" rel="noopener">in linkedin.com/in/anne-subashini-sritharan-112a09142</a>
+    </div>
+    <div class="foot-note">© 2026 Anne Subashini Sritharan</div>
+  </div>
+</footer>
+
+</body>
+</html>
